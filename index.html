@@ -8,16 +8,29 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="parent">
-        <div class="heading">
-            <h1>CALCULATOR</h1>
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
         </div>
-        <div class="container">
-            <div class="calculator">
-                <div class="display"></div>
-                <div class="controls"></div>
-            </div>
-        </div>
-    </div>
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>÷</button>
+        <button data-numbers>1</button>
+        <button data-numbers>2</button>
+        <button data-numbers>3</button>
+        <button data-operation>*</button>
+        <button data-numbers>4</button>
+        <button data-numbers>5</button>
+        <button data-numbers>6</button>
+        <button data-operation>+</button>
+        <button data-numbers>7</button>
+        <button data-numbers>8</button>
+        <button data-numbers>9</button>
+        <button data-operation>-</button>
+        <button data-numbers>.</button>
+        <button data-numbers>0</button>
+        <button data-equals class="span-two">=</button>
+    </div>   
 </body>
 </html>
