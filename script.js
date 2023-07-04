@@ -12,7 +12,7 @@ class Calculator{
     }
     delete()
     {
-
+        this.currentOperand=this.currentOperand.toString().slice(0,-1);
     }
     appendNumber(n)
     {
@@ -74,7 +74,14 @@ class Calculator{
     updateDisplay()
     {
         this.currentOperandElement.innerText=this.currentOperand;
-        this.previousOperandElement.innerText=this.previousOperand;
+        if(this.operation!=null)
+        {
+            this.previousOperandElement.innerText=`${this.previousOperand} ${this.operation}`
+        }
+        else
+        {
+            this.previousOperandElement.innerText=this.previousOperand;
+        }
     }
 }
 const numberButtons=document.querySelectorAll('[data-numbers]')
@@ -104,5 +111,9 @@ equalsButton.addEventListener('click',()=>{
 })
 allclearButton.addEventListener('click',()=>{
     calculator.clear();
+    calculator.updateDisplay();
+})
+deleteButton.addEventListener('click',()=>{
+    calculator.delete()
     calculator.updateDisplay();
 })
